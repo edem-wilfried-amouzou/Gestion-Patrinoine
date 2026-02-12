@@ -73,29 +73,34 @@ WSGI_APPLICATION = 'gestion_patrinoine.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # from decouple import config
 # ... (reste du code)
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
-        'OPTIONS': {
-            'use_pure': True,
-            'raise_on_warnings': True, # On définit explicitement le booléen attendu
-        }
-    }
-}
+# DATABASES = {
+#     'default': {
+#         # # 'ENGINE': 'mysql.connector.django',
+#         # 'ENGINE': 'django.db.backends.mysql',
+#         # 'NAME': config('DB_NAME'),
+#         # 'USER': config('DB_USER'),
+#         # 'PASSWORD': config('DB_PASSWORD'),
+#         # 'HOST': config('DB_HOST'),
+#         # 'PORT': config('DB_PORT'),
+
+#     DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 
 # Profites-en aussi pour sécuriser ta SECRET_KEY et le DEBUG
 
